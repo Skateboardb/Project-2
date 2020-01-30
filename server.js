@@ -43,5 +43,5 @@ db.sequelize.sync(syncOptions).then(function() {
     );
   });
 });
-
+//new comment
 module.exports = app;
