@@ -1,24 +1,26 @@
 # BEERFINDER 2.0
 
-### WELCOME
+## WELCOME
 
 - Presents user with a welcome message and start button
 
-### SURVEY
+- Show log-in button
+
+## SURVEY
 
 - Asks questions to determine user's preferred flavor profile
 
-### AUTHENTICATION
+## AUTHENTICATION
 
 - Requires name, email, and password to view results
 
-### RESULTS PAGE
+## RESULTS PAGE
 
 - Shows most likely match for beer category preference ex. IPA, Lager, etc. (top 3? #1?)
 
 - Shows popular beers within category for user to try
 
-### BONUS USER REVIEWS
+## BONUS USER REVIEWS
 
 - Gives the option to rate brands and brews
 
