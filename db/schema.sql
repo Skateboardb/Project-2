@@ -22,9 +22,15 @@ CREATE TABLE IF NOT EXISTS beers
     FOREIGN KEY (id) REFERENCES users(id)
  );
 
--- CREATE TABLE IF NOT EXISTS examples
---  (  
---     id int NOT NULL AUTO_INCREMENT,
---     example varchar(255) NOT NULL,
---     PRIMARY KEY (id)
---  );
+ CREATE TABLE IF NOT EXISTS questions
+ (  
+    id int NOT NULL AUTO_INCREMENT,
+    question VARCHAR (1000) NOT NULL
+    most_neg BOOLEAN NOT NULL DEFAULT FALSE,
+    some_neg BOOLEAN NOT NULL DEFAULT FALSE, 
+    neut BOOLEAN NOT NULL DEFAULT FALSE, 
+    some_pos BOOLEAN NOT NULL DEFAULT FALSE, 
+    some_pos BOOLEAN NOT NULL DEFAULT FALSE, 
+    PRIMARY KEY (id)
+     );
+
