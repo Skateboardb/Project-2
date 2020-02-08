@@ -18,19 +18,25 @@ CREATE TABLE IF NOT EXISTS beers
  (  
     id int NOT NULL AUTO_INCREMENT,
     beerName varchar(255) NOT NULL,
+    description VARCHAR (500) NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (id) REFERENCES users(id)
+
  );
 
  CREATE TABLE IF NOT EXISTS questions
  (  
     id int NOT NULL AUTO_INCREMENT,
-    question VARCHAR (1000) NOT NULL
-    most_neg BOOLEAN NOT NULL DEFAULT FALSE,
-    some_neg BOOLEAN NOT NULL DEFAULT FALSE, 
-    neut BOOLEAN NOT NULL DEFAULT FALSE, 
-    some_pos BOOLEAN NOT NULL DEFAULT FALSE, 
-    some_pos BOOLEAN NOT NULL DEFAULT FALSE, 
+    question VARCHAR (1000) NOT NULL,
     PRIMARY KEY (id)
      );
+
+CREATE TABLE IF NOT EXISTS answers
+(
+ id int NOT NULL AUTO_INCREMENT,
+ question_id NOT NULL 
+    answer VARCHAR (255) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (question_id) REFERENCES questions(id)
+    );
+
 
