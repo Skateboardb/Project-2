@@ -1,4 +1,4 @@
-
+require("dotenv").config();
 var express = require("express");
 // var exphbs = require("express-handlebars");
 var axios = require('axios');
@@ -9,6 +9,12 @@ var db = require("./models");
 var app = express();
 var PORT = process.env.PORT || 3000;
 var syncOptions = { force: false };
+
+// If running a test, set syncOptions.force to true
+// clearing the `testdb`
+if (process.env.NODE_ENV === "test") {
+  syncOptions.force = true;
+}
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -28,14 +34,6 @@ app.use(express.static("public"));
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
-
-
-
-// If running a test, set syncOptions.force to true
-// clearing the `testdb`
-if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
-}
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
