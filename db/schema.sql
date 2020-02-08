@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS beers
     id int NOT NULL AUTO_INCREMENT,
     beerName varchar(255) NOT NULL,
     description VARCHAR (500) NOT NULL,
-    PRIMARY KEY (id),
+    PRIMARY KEY (id)
 
  );
 
@@ -32,8 +32,8 @@ CREATE TABLE IF NOT EXISTS beers
 
 CREATE TABLE IF NOT EXISTS answers
 (
- id int NOT NULL AUTO_INCREMENT,
- question_id NOT NULL 
+ id INT NOT NULL AUTO_INCREMENT,
+ question_id INT NOT NULL,
     answer VARCHAR (255) NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (question_id) REFERENCES questions(id)
