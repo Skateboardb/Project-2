@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "Trumpsucks#3",
-    "database": "exampledb",
+    "database": "beer_db",
     "host": "localhost",
     "dialect": "mysql"
   },
