@@ -6,9 +6,9 @@ USE beer_db;
 CREATE TABLE IF NOT EXISTS users
 (
  	id int NOT NULL AUTO_INCREMENT,
-	userFirst varchar(255) NOT NULL,
-    userLast varchar(255) NOT NULL,
-    emailAddress varchar(20),
+	userFirst VARCHAR (255) NOT NULL,
+    userLast VARCHAR (255) NOT NULL,
+    emailAddress VARCHAR (20),
 	PRIMARY KEY (id)
 
 );

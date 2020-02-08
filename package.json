@@ -1,7 +1,7 @@
 {
   "name": "project-2",
   "version": "1.0.0",
-  "description": "",
+  "description": "## WELCOME",
   "main": "server.js",
   "scripts": {
     "test": "mocha",
@@ -25,11 +25,16 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
     "mocha": "^7.0.1",
     "mysql": "^2.18.1",
     "mysql-server": "^1.0.5",
     "mysql2": "^2.1.0",
     "request": "^2.88.0",
     "sequelize": "^5.21.3"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {}
 }
