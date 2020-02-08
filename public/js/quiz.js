@@ -10,4 +10,4 @@ var questions = [{
     question: "What is the name of the substance that gives skin and hair its pigment?",
     choices: ["Dermis", "Melanin", "Swear Gland", "Epiderms"],
     correctAnswer: 1
-  }
+  }]
