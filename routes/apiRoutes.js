@@ -2,7 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all beer
-  app.get("/api/Beer", function(req, res) {
+  app.get("/api/beer", function(req, res) {
     db.beer.findAll({}).then(function(dbBeer) {
       res.json(dbBeer);
     });
