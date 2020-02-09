@@ -22,5 +22,3 @@ VALUES
     ("Among of the most approachable and versatile styles stands one of the oldest beers still around today - wheat beer. While the original variants offer notes of banana and clove, the American version omits them due to the type of yeast used in production in favor of a refreshing, slightly hoppier finish. We think you'll like it because it plays nicely with lighter dishes such as seafood and salad."),
     ("Perhaps one of the most iconic beers of the modern world, Pilsner stands tall and golden with its hops coming to center-stage without becoming overly bitter. This pale and light-bodied brew makes a refreshing companion in warmer months, and we think you'll enjoy it along with a nice dinner of chicken and shellfish."),
     ("Light carbonation, sweet malty goodness, and a smooth finish... what's not to love? For those who aren't crazy about the hoppy flavor of some other popular brews, the practically ancient Bock style may just be the longest-standing beer to date. We think you'll enjoy the toasty, nutty flavor this German classic brings to the table.");
-
-
