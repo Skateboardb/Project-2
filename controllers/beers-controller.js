@@ -6,9 +6,9 @@ var db = require("../models");
 // Load index page
 app.get("/", function(req, res) {
 	db.beer.findAll({}).then(function(data) {
-		// var hbsObject = {
-		// 	beers: data
-		// };
+		var hbsObject = {
+			beers: data
+		};
 
 		res.render("../views/index", hbsObject);
 	});

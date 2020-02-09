@@ -22,8 +22,10 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-// require("./controllers/apiRoutes")(app);
-// require("./controllers/beers-controller")(app);
+// require("./routes/apiRoutes")(app);
+var routes = require("./controllers/beers-controller");
+
+app.use("/", routes);
 
 var syncOptions = { force: false };
 

@@ -21,7 +21,7 @@
         <ul id="beer-list" class="list-group">
           {{#each beers}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="beer/{{this.id}}">{{this.description}}</a>
+            <a href="beer/{{this.id}}">{{this.style}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}
