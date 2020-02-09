@@ -7,19 +7,21 @@
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="beer-text">Example Text</label>
-            <input type="text" id="beer-text" class="form-control" aria-describedby="beer-text" placeholder="Enter Example Text">
+            <input type="text" id="beer-text" class="form-control" aria-describedby="beer-text"
+              placeholder="Enter Example Text">
           </div>
           <div class="form-group">
             <label for="beer-description">Example Description</label>
-            <textarea class="form-control" id="beer-description" aria-describedby="beer-description" placeholder="Enter Example Description"></textarea>
+            <textarea class="form-control" id="beer-description" aria-describedby="beer-description"
+              placeholder="Enter Example Description"></textarea>
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
         <h3>Beer:</h3>
         <ul id="beer-list" class="list-group">
-          {{#each Beer}}
+          {{#each beers}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="beer/{{this.id}}">{{this.text}}</a>
+            <a href="beer/{{this.id}}">{{this.style}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}
