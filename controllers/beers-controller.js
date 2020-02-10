@@ -16,13 +16,13 @@ app.get("/", function(req, res) {
 });
 
 //load survey
-app.get("/survey", function(req, res) {
-	db.beer.findAll({}).then(function(data) {
+app.get("/quiz", function(req, res) {
+	Promise.all([db.answers.findAll({}), db.questions.findAll({})]).then(data => {
 		var hbsObject = {
-			beers: data
+			answers: data[0],
+			questions: data[1]
 		};
-
-		res.render("../views/survey", hbsObject);
+		res.render("../views/quiz", hbsObject);
 	});
 });
 
