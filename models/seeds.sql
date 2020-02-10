@@ -26,4 +26,8 @@ VALUES
     
     (4,"It's like you don't know me at all", "I mean... maybe three?", "Depends...", "Sounds about right.", "I will nurse one drink all night long."),
     
+<<<<<<< HEAD
     (5,"EVERY TIME", "I usually like a good meal.", "Depends on how I feel.", "I usually eat pretty light.","I don't think that could be more wrong.");
+=======
+    (5,"EVERY TIME", "I usually like a good meal.", "Depends on how I feel.", "I usually eat pretty light.","I don't think that could be more wrong.");
+>>>>>>> c016dd1e15be9d599d8ff247191e09e49ad56832
