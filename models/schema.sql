@@ -9,6 +9,9 @@ CREATE DATABASE beer_db;
 -- 	beer varchar(255),
 --     EmailAddress varchar(20),
 -- 	PRIMARY KEY (id)
+
+-- ~~~~~~~ ADD PASSWORD COLUMN FOR SEQUELIZE ~~~~~~
+
 -- );
 -- CREATE TABLE IF NOT EXISTS beers
 --  (  

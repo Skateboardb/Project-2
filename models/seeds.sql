@@ -14,7 +14,7 @@ VALUES
 INSERT INTO questions
     (question)
 VALUES
-    ("You're at a restaurant and you've been offered a free dessert. What would you most likely choose?"),("Rate how much you agree with the following: I prefer sweet-scented candles to earthy ones like floral or pine"),("Imagine your ideal beer-drinking scene... what's the scene?"),("Rate how much you agree with the following: I prefer to have one or two good drinks than to down several brews in a single sitting."),("Rate how much you agree with the following: I typically would rather have a meal that's hearty and complex than something light and simple.")
+    ("You're at a restaurant and you've been offered a free dessert. What would you most likely choose?"),("Rate how much you agree with the following: I prefer sweet-scented candles to earthy ones like floral or pine"),("Imagine your ideal beer-drinking scene... what's the scene?"),("Rate how much you agree with the following: I prefer to have one or two good drinks than to down several brews in a single sitting."),("Rate how much you agree with the following: I typically would rather have a meal that's hearty and complex than something light and simple.");
 
     INSERT INTO answers
         (question_id,a1,a2,a3,a4,a5)
@@ -26,4 +26,4 @@ VALUES
     
     (4,"It's like you don't know me at all", "I mean... maybe three?", "Depends...", "Sounds about right.", "I will nurse one drink all night long."),
     
-    (5,"EVERY TIME", "I usually like a good meal.", "Depends on how I feel.", "I usually eat pretty light.","I don't think that could be more wrong.")
+    (5,"EVERY TIME", "I usually like a good meal.", "Depends on how I feel.", "I usually eat pretty light.","I don't think that could be more wrong.");
