@@ -1,40 +1,48 @@
-<div class="row ">
-    <div id="ansContainer" class="col-10 ">
-        {{#each answers}}
-        {{!-- {{#each questions}} --}}
-        <div class="row">
-            <div class="col-md">
-                <label for="q1a1">
-                    <input id="q1a1" type="checkbox" value="false">
-                    <h3>{{a1}} </h3>
-                </label>
+<form>
+    <div class="row ">
+        <div id="ansContainer" class="col-10 ">
+            {{#each questionanswers}}
+            {{!-- {{#each questions}} --}}
+            <div class="row">
+                <div class="col-md">
+                    <h3>{{question}}</h3>
+                </div>
             </div>
-            <div class="col-md">
-                <label for="q1a2">
-                    <input id="q1a2" type="checkbox" value="false">
-                    <h3 class="">{{a2}} </h3>
-                </label>
+            <div class="row">
+                <div class="col-md">
+                    <label for="{{a1}}">
+                        <input id="{{a1}}" type="checkbox" value="false">
+                        <h3>{{a1}} </h3>
+                    </label>
+                </div>
+                <div class="col-md">
+                    <label for="{{a2}}">
+                        <input id="{{a2}}" type="checkbox" value="false">
+                        <h3 class="">{{a2}} </h3>
+                    </label>
+                </div>
+                <div class="col-md">
+                    <label for="{{a3}}">
+                        <input id="{{a3}}" type="checkbox" value="false">
+                        <h3 class="">{{a3}} </h3>
+                    </label>
+                </div>
+                <div class="col-md">
+                    <label for="{{a4}}">
+                        <input id="{{a4}}" type="checkbox" value="false">
+                        <h3 class="">{{a4}} </h3>
+                    </label>
+                </div>
+                <div class="col-md">
+                    <label for="{{a5}}">
+                        <input id="{{a5}}" type="checkbox" value="false">
+                        <h3 class="">{{a5}} </h3>
+                    </label>
+                </div>
             </div>
-            <div class="col-md">
-                <label for="q1a3">
-                    <input id="q1a3" type="checkbox" value="false">
-                    <h3 class="">{{a3}} </h3>
-                </label>
-            </div>
-            <div class="col-md">
-                <label for="q1a4">
-                    <input id="q1a4" type="checkbox" value="false">
-                    <h3 class="">{{a4}} </h3>
-                </label>
-            </div>
-            <div class="col-md">
-                <label for="q1a5">
-                    <input id="q1a5" type="checkbox" value="false">
-                    <h3 class="">{{a5}} </h3>
-                </label>
-            </div>
+            {{!-- {{/each}} --}}
+            {{/each}}
         </div>
-        {{!-- {{/each}} --}}
-        {{/each}}
     </div>
-</div>
+    <input type="submit">
+</form>

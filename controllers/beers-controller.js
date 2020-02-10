@@ -15,13 +15,23 @@ app.get("/", function(req, res) {
 	});
 });
 
+// app.get("/quiz", function(req, res) {
+// 	Promise.all([db.answers.findAll({}), db.questions.findAll({})]).then(data => {
+// 		var hbsObject = {
+// 			answers: data[0],
+// 			questions: data[1]
+// 		};
+// 		res.render("../views/quiz", hbsObject);
+// 	});
+// });
+
 //load survey
 app.get("/quiz", function(req, res) {
-	Promise.all([db.answers.findAll({}), db.questions.findAll({})]).then(data => {
+	db.questionanswers.findAll({}).then(function(data) {
 		var hbsObject = {
-			answers: data[0],
-			questions: data[1]
+			questionanswers: data
 		};
+
 		res.render("../views/quiz", hbsObject);
 	});
 });
