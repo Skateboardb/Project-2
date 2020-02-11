@@ -24,9 +24,11 @@ module.exports = function(app) {
 //   });
 
 
-var email = req.body
+
 
 app.post("/input", function(req, res) {
+  
+  var email = req.body
   
   console.log(req.body);
   db.beer.create({

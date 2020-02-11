@@ -1,6 +1,8 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+var apiURL = 'https://sandbox-api.brewerydb.com/v2/';
+var apiKey = process.env.DB_PASS;
 
 var db = require("./models");
 
@@ -12,6 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 
+
 // Handlebars
 app.engine(
 	"handlebars",
@@ -22,7 +25,7 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-// require("./routes/apiRoutes")(app);
+require("./controllers/apiRoutes")(app);
 var routes = require("./controllers/beers-controller");
 
 app.use("/", routes);
@@ -45,5 +48,6 @@ db.sequelize.sync(syncOptions).then(function() {
 		);
 	});
 });
+
 
 module.exports = app;
