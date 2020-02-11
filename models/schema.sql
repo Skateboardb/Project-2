@@ -3,11 +3,8 @@ CREATE DATABASE beer_db;
 -- USE beer_db;
 -- CREATE TABLE IF NOT EXISTS users
 -- (
---  	id int NOT NULL AUTO_INCREMENT,
--- 	userFirst varchar(255),
---     userLast varchar(255),
--- 	beer varchar(255),
---     EmailAddress varchar(20),
+--  id int NOT NULL AUTO_INCREMENT,
+--  EmailAddress varchar(20),
 -- 	PRIMARY KEY (id)
 
 -- ~~~~~~~ ADD PASSWORD COLUMN FOR SEQUELIZE ~~~~~~

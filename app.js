@@ -26,7 +26,7 @@
 //   console.log("Listening at http://localhost:8000");
 // });
 
-
+require('dotenv').config()
 var express = require('express');
 var path = require('path');
 // var favicon = require('serve-favicon');
