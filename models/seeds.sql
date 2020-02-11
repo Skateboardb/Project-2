@@ -17,6 +17,18 @@ INSERT INTO questions
 VALUES
     ("You're at a restaurant and you've been offered a free dessert. What would you most likely choose?"),("Rate how much you agree with the following: I prefer sweet-scented candles to earthy ones like floral or pine"),("Imagine your ideal beer-drinking scene... what's the scene?"),("Rate how much you agree with the following: I prefer to have one or two good drinks than to down several brews in a single sitting."),("Rate how much you agree with the following: I typically would rather have a meal that's hearty and complex than something light and simple.");
 
+    INSERT INTO questionanswers
+        (question,a1,a2,a3,a4,a5)
+    VALUES ("You're at a restaurant and you've been offered a free dessert. What would you most likely choose?","Orange Julius","Triple Chocolate Cake","Salted Caramel Cheesecake","Creme Brulee","Are these the only choices?"),
+    
+    ("Rate how much you agree with the following: I prefer sweet-scented candles to earthy ones like floral or pine","Absolutely not.", "Not so much...", "I don't really care", "Eh I guess...", "YES."),
+
+    ("Imagine your ideal beer-drinking scene... what's the scene?","Cozy winter night", "Cool evening in Autumn", "Scene? Doesn't matter. Give me the beer.", "Perfect Spring weather", "Warm Summer night"),
+    
+    ("Rate how much you agree with the following: I prefer to have one or two good drinks than to down several brews in a single sitting.","It's like you don't know me at all", "I mean... maybe three?", "Depends...", "Sounds about right.", "I will nurse one drink all night long."),
+    
+    ("Rate how much you agree with the following: I typically would rather have a meal that's hearty and complex than something light and simple.","EVERY TIME", "I usually like a good meal.", "Depends on how I feel.", "I usually eat pretty light.","I don't think that could be more wrong.");
+
     INSERT INTO answers
         (question_id,a1,a2,a3,a4,a5)
     VALUES (1,"Orange Julius","Triple Chocolate Cake","Salted Caramel Cheesecake","Creme Brulee","Are these the only choices?"),
