@@ -11,7 +11,7 @@ app.get("/", function(req, res) {
 			beers: data[0],
 			questions: data[1]
 		};
-		res.render("../views/index", hbsObject);
+		res.render("../views/front", hbsObject);
 	});
 });
 
@@ -49,21 +49,9 @@ app.get("/input", function(req, res) {
 
 //register input
 
-app.post("/input", function(req, res) {
-	var email = req.body;
-	console.log(req.body);
-	db.beer
-		.create({
-			email: email
-		})
-		.then(function(dbbeer) {
-			res.json(dbbeer);
-		});
-	users.push({
-		email
-	});
-	console.log(users);
-	res.send("hello");
+app.post("/register", function(req, res) {
+
+	res.render("../views/register", hbsObject);
 });
 
 // Load beer page and pass in an beer by id

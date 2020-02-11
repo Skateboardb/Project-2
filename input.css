@@ -3,7 +3,7 @@
 
 body {
     font-family: 'PT Serif', serif;
-    background: url(images/beer-1513436_1920.jpg) no-repeat center center fixed;
+    background: url(../images/beer-1513436_1920.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 .main-section {
