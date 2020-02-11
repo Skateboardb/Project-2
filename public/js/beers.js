@@ -19,11 +19,14 @@
 // ]
 // alert("hello");
 $(function() {
-	$(".create-form").on("submit", function(event) {
+	$("button").on("click", function(event) {
 		// Make sure to preventDefault on a submit event.
 		event.preventDefault();
+		var data = [];
 
-		var input = $(".input-group").val();
-		console.log();
+		$.each($("input:checked"), function() {
+			data.push($(this).val());
+		});
+		console.log(data.join(", "));
 	});
 });

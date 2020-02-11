@@ -1,4 +1,4 @@
-<form class="create-form">
+<form class="create-form" id="create-form">
     <div class="row form-group ">
         <div id="ansContainer" class="col-10 ">
             {{#each questionanswers}}
@@ -12,31 +12,31 @@
                 <fieldset class="survey-answers" name="{{id}}">
                     <div class="col-2">
                         <label for="q{{id}}a1">
-                            <input name="{{id}}" id="q{{id}}a1" type="radio" value="{{id}}" data-val="1">
+                            <input name="{{id}}" id="q{{id}}a1" type="radio" value="q{{id}}a1" data-val="1">
                             <h3>{{a1}} </h3>
                         </label>
                     </div>
                     <div class="col-2">
                         <label for="q{{id}}a2">
-                            <input name="{{id}}" id="q{{id}}a2" type="radio" value="{{id}}">
+                            <input name="{{id}}" id="q{{id}}a2" type="radio" value="q{{id}}a2">
                             <h3 class="">{{a2}} </h3>
                         </label>
                     </div>
                     <div class="col-2">
                         <label for="q{{id}}a3">
-                            <input name="{{id}}" id="q{{id}}a3" type="radio" value="{{id}}">
+                            <input name="{{id}}" id="q{{id}}a3" type="radio" value="q{{id}}a3">
                             <h3 class="">{{a3}} </h3>
                         </label>
                     </div>
                     <div class="col-2">
                         <label for="q{{id}}a4">
-                            <input name="{{id}}" id="q{{id}}a4" type="radio" value="{{id}}">
+                            <input name="{{id}}" id="q{{id}}a4" type="radio" value="q{{id}}a4">
                             <h3 class="">{{a4}} </h3>
                         </label>
                     </div>
                     <div class="col-2">
                         <label for="q{{id}}a5">
-                            <input name="{{id}}" id="q{{id}}a5" type="radio" value="{{id}}">
+                            <input name="{{id}}" id="q{{id}}a5" type="radio" value="q{{id}}a5">
                             <h3 class="">{{a5}} </h3>
                         </label>
                     </div>
