@@ -9,7 +9,6 @@ const flash = require('express-flash');
 const session = require('express-session');
 const methodOverride = require('method-override');
 var users = [];
-
 var db = require("../models");
 
 // Load index page
@@ -96,6 +95,7 @@ function checkNotAuthenticated(req, res, next) {
     }
     next()
 }
+
 
 
 // Load beer page and pass in an beer by id

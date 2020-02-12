@@ -33,3 +33,17 @@
 ## TECHNOLOGIES USED
 
 - node.js, express.js, mySQL, chosen-js, [authentication?]
+
+## MVPs
+
+- Fill index.html, results.html, about.html with appropriate elements from wireframe
+
+- Create a beer object with a constructor and the properties and methods from UML
+
+- Create an object that handles rendering information to the index.html.
+
+- Create an object that handles rending information to the results.html
+
+- Have static array containing all the possible suggestions, I.E. beer objects.
+
+- Create an object called User that contains the properties and methods from the UML.
