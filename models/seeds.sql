@@ -1,4 +1,5 @@
 USE beer_db;
+
 INSERT INTO beers
     (style, description)
 VALUES
