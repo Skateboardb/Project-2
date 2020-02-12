@@ -12,12 +12,24 @@ var db = require("./models");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
+var beer = require('./controllers/beer');
+var styles = require('./controllers/styles');
+
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 
 app.use(bodyParser.json());
+
+app.use(function(req, res, next) {
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
+  });
+  
+  app.use('/beers', beer);
+  app.use('/styles', styles);
 
 // BreweryDB
 client.beers({name: 'Budweiser'}, function(err, res) {

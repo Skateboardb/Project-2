@@ -2,7 +2,6 @@
     <div class="row ">
         <div id="ansContainer" class="col-10 ">
             {{#each questionanswers}}
-            {{!-- {{#each questions}} --}}
             <div class="row">
                 <div class="col-md">
                     <h3>{{question}}</h3>
@@ -40,9 +39,8 @@
                     </label>
                 </div>
             </div>
-            {{!-- {{/each}} --}}
             {{/each}}
         </div>
     </div>
-    <input type="submit">
+    <input id="submit" type="submit">
 </form>

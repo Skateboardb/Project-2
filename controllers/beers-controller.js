@@ -1,7 +1,6 @@
 var express = require("express");
 var app = express.Router();
 var users = [];
-
 var db = require("../models");
 
 // Load index page
@@ -65,6 +64,7 @@ app.post("/input", function(req, res) {
 	console.log(users);
 	res.send("hello");
 });
+
 
 // Load beer page and pass in an beer by id
 // app.get("/beer/:id", function(req, res) {
