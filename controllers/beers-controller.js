@@ -23,8 +23,21 @@ app.get("/quiz", function(req, res) {
 		var hbsObject = {
 			questionanswers: data
 		};
-		console.log(hbsObject.data)
+		console.log(hbsObject.data);
 		res.render("../views/quiz", hbsObject);
+	});
+});
+
+// store results
+app.post("/api/users", function(req, res) {
+	db.users.create(req.body).then(function(result) {
+		res.json(result);
+	});
+});
+
+app.get("/api/users", function(req, res) {
+	db.users.findAll({}).then(function(data) {
+		res.json(data);
 	});
 });
 
