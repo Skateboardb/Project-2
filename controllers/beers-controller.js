@@ -23,7 +23,7 @@ app.get("/quiz", function(req, res) {
 		var hbsObject = {
 			questionanswers: data
 		};
-
+		console.log(hbsObject.data)
 		res.render("../views/quiz", hbsObject);
 	});
 });
