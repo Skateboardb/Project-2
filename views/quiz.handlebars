@@ -2,6 +2,7 @@
     <div class="row form-group ">
         <div id="ansContainer" class="col-10 ">
             {{#each questionanswers}}
+            {{!-- {{#each questions}} --}}
             <div class="row">
                 <div class="col-md">
                     <h3>{{question}}</h3>
@@ -41,28 +42,10 @@
                         </label>
                     </div>
                 </div>
-                <div class="col-md">
-                    <label for="{{a4}}">
-                        <input id="{{a4}}" type="checkbox" value="false">
-                        <h3 class="">{{a4}} </h3>
-                    </label>
-                </div>
-                <div class="col-md">
-                    <label for="{{a5}}">
-                        <input id="{{a5}}" type="checkbox" value="false">
-                        <h3 class="">{{a5}} </h3>
-                    </label>
-                </div>
+            </fieldset>
+            {{!-- {{/each}} --}}
+            {{/each}}
         </div>
-        {{/each}}
     </div>
-    </div>
-    <input id="submit" type="submit">
-
-    </fieldset>
-    {{!-- {{/each}} --}}
-
-    </div>
-    </div>
-    <button type="submit">Submit</button>
+    <button id="surveySubmit" type="submit">Submit</button>
 </form>

@@ -31,7 +31,7 @@ var beerScore = {
 
 var highScore = [];
 $(function() {
-	$("button").on("click", function(event) {
+	$("#surveySubmit").on("click", function(event) {
 		// Make sure to preventDefault on a submit event.
 		event.preventDefault();
 		var data = [];
@@ -167,6 +167,7 @@ $(function() {
 		console.log(keyArray);
 		var highest = 0;
 		var key;
+		var styleRec = [];
 		for (let i = 0; i < keyArray.length; i++) {
 			key = keyArray[i];
 			if (beerScore[key] > highest) {
@@ -176,7 +177,8 @@ $(function() {
 		for (let i = 0; i < keyArray.length; i++) {
 			key = keyArray[i];
 			if (beerScore[key] == highest) {
-				console.log(key);
+				styleRec.push(key);
+				console.log(styleRec);
 			}
 		}
 		// console.log("highest score: " + highest);
