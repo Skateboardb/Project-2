@@ -1,6 +1,7 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+
 var apiURL = 'https://sandbox-api.brewerydb.com/v2/';
 var apiKey = process.env.DB_PASS;
 var passport = require("passport");
@@ -8,6 +9,13 @@ var bcrypt = require("bcrypt");
 const flash = require('express-flash');
 const session = require('express-session');
 const methodOverride = require('method-override');
+
+var bodyParser = require("body-parser");
+var BreweryDb = require('node-brewerydb');
+var client = new BreweryDb({apiKey: "16194eefa3c198216f76be77bbbead48"});
+var request = require("request");
+var path = require('path');
+
 
 var db = require("./models");
 
@@ -31,9 +39,22 @@ app.use(session({
     saveUninitialized: false
 }))
 app.use(express.static("public"));
+
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(methodOverride('_method'));
+=======
+
+app.use(bodyParser.json());
+
+// BreweryDB
+client.beers({name: 'Budweiser'}, function(err, res) {
+	if (err) {
+	  // handle errors
+	}
+	console.log(res);
+  });
+
 
 // Handlebars
 app.engine(
@@ -49,6 +70,9 @@ require("./controllers/apiRoutes")(app);
 var routes = require("./controllers/beers-controller");
 
 app.use("/", routes);
+
+require("./app")
+
 
 var syncOptions = { force: false };
 

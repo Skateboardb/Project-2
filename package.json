@@ -38,8 +38,12 @@
     "mysql": "^2.18.1",
     "mysql-server": "^1.0.5",
     "mysql2": "^2.1.0",
+
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+
+    "node-brewerydb": "git+https://github.com/DanielOchoa/node-brewery-db.git",
+
     "request": "^2.88.0",
     "require": "^2.4.20",
     "sequelize": "^5.21.4"
@@ -48,6 +52,6 @@
     "test": "test"
   },
   "devDependencies": {
-    "handlebars": "^4.7.3"
+    "handlebars": "4.5.0"
   }
 }
