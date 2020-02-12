@@ -15,11 +15,16 @@ VALUES
     ("German-Style Pilsner", "Perhaps one of the most iconic beers of the modern world, Pilsner stands tall and golden with its hops coming to center-stage without becoming overly bitter. This pale and light-bodied brew makes a refreshing companion in warmer months, and we think you'll enjoy it along with a nice dinner of chicken and shellfish."),
     ("German-Style Bock", "Light carbonation, sweet malty goodness, and a smooth finish... what's not to love? For those who aren't crazy about the hoppy flavor of some other popular brews, the practically ancient Bock style may just be the longest-standing beer to date. We think you'll enjoy the toasty, nutty flavor this German classic brings to the table.");
 
+
 -- INSERT INTO questions
 --     (question)
 -- VALUES
 --     ("You're at a restaurant and you've been offered a free dessert. What would you most likely choose?"),("Rate how much you agree with the following: I prefer sweet-scented candles to earthy ones like floral or pine"),("Imagine your ideal beer-drinking scene... what's the scene?"),("Rate how much you agree with the following: I prefer to have one or two good drinks than to down several brews in a single sitting."),("Rate how much you agree with the following: I typically would rather have a meal that's hearty and complex than something light and simple.");
     
+
+
+
+
     INSERT INTO questionanswers
         (question,a1,a2,a3,a4,a5)
     VALUES ("You're at a restaurant and you've been offered a free dessert. What would you most likely choose?","Orange Julius","Triple Chocolate Cake","Salted Caramel Cheesecake","Creme Brulee","Are these the only choices?"),
@@ -32,6 +37,7 @@ VALUES
     
     ("Rate how much you agree with the following: I typically would rather have a meal that's hearty and complex than something light and simple.","EVERY TIME", "I usually like a good meal.", "Depends on how I feel.", "I usually eat pretty light.","I don't think that could be more wrong.");
 
+
     -- INSERT INTO answers
     --     (question_id,a1,a2,a3,a4,a5)
     -- VALUES (1,"Orange Julius","Triple Chocolate Cake","Salted Caramel Cheesecake","Creme Brulee","Are these the only choices?"),
@@ -43,3 +49,6 @@ VALUES
     -- (4,"It's like you don't know me at all", "I mean... maybe three?", "Depends...", "Sounds about right.", "I will nurse one drink all night long."),
     
     -- (5,"EVERY TIME", "I usually like a good meal.", "Depends on how I feel.", "I usually eat pretty light.","I don't think that could be more wrong.");
+
+    
+
