@@ -181,6 +181,20 @@ $(function() {
 				console.log(styleRec);
 			}
 		}
+
+		var newRec = {
+			rec_style1: styleRec[0],
+			rec_style2: styleRec[1]
+		};
+
+		$.ajax("/api/users", {
+			type: "POST",
+			data: newRec
+		}).then(function(data) {
+			// Reload the page to get the updated list
+			location.reload();
+		});
+
 		// var newStyle={
 		// 	rec_style1:
 		// }
@@ -204,5 +218,4 @@ $(function() {
 		// });
 		// console.log(highest);
 	});
-
 });
