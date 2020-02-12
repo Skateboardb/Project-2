@@ -162,7 +162,7 @@ $(function() {
 				beerScore.stout++;
 				break;
 		}
-
+		console.log(beerScore);
 		var keyArray = Object.keys(beerScore);
 		console.log(keyArray);
 		var highest = 0;
@@ -181,6 +181,13 @@ $(function() {
 				console.log(styleRec);
 			}
 		}
+		// var newStyle={
+		// 	rec_style1:
+		// }
+		// $.ajax("api/users"),{
+		// 	type: "POST",
+		// 	data:
+		// }
 		// console.log("highest score: " + highest);
 
 		// console.log(beerScore);
