@@ -1,68 +1,77 @@
-@import url('https://fonts.googleapis.com/css?family=Bangers');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url("https://fonts.googleapis.com/css?family=Bangers");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
 
-html, body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
 }
 
-.intro{
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    background: url(/images/beer-1513436_1920.jpg) no-repeat 50% 50%;
-    display: table;
-    top: 0;
-    background-size: cover;
+.intro {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background: url(../public/images/beer-1513436_1920.jpg) no-repeat 50% 50%;
+	display: table;
+	top: 0;
+	background-size: cover;
 }
 
 .inner {
-    display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-    max-width: none;
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	max-width: none;
 }
 
 .content {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: center;
 }
 
 h1 {
-    font-family: 'Bangers', sans-serif;
-    color: white;
-    text-shadow: 0px 0px 300px black;
-    font-size: 500%;
+	font-family: "Bangers", sans-serif;
+	color: white;
+	text-shadow: 0px 0px 300px black;
+	font-size: 500%;
 }
 
 .btn {
-    border: solid;
-    border-color: white;
-    border-width: 3px;
-    border-radius: 9px;
-    font-family: 'Oswald', sans-serif;
-    color: white;
-    font-size: 135%;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    text-decoration: none;
+	border: solid;
+	border-color: white;
+	border-width: 3px;
+	border-radius: 9px;
+	font-family: "Oswald", sans-serif;
+	color: white;
+	font-size: 135%;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 .btn:hover {
-    color: gray;
-    border: solid;
-    border-color: gray;
-    border-width: 3px;
+	color: gray;
+	border: solid;
+	border-color: gray;
+	border-width: 3px;
 }
 
 @media screen and (max-width: 768px) {
-    .content h1 {
-        font-size: 250%;
-    }
-    .btn {
-        font-size: 110%;
-        padding: 7px 15px;
-    }
+	.content h1 {
+		font-size: 250%;
+	}
+	.btn {
+		font-size: 110%;
+		padding: 7px 15px;
+	}
+}
+
+.list-group-item {
+	line-height: 2.5;
+}
+
+#ansContainer {
+	margin: auto;
 }
