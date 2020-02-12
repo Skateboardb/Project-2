@@ -11,7 +11,7 @@ app.get("/", function(req, res) {
 			beers: data[0],
 			questions: data[1]
 		};
-		res.render("../views/index", hbsObject);
+		res.render("../views/front", hbsObject);
 	});
 });
 
@@ -64,6 +64,10 @@ app.post("/input", function(req, res) {
 	users.push({
 		email
 	});
+});
+
+app.post("/register", function(req, res) {
+	res.render("../views/register", hbsObject);
 });
 
 // Load beer page and pass in an beer by id
