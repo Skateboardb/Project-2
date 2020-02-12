@@ -30,14 +30,14 @@
 // };
 
 var beerScore = [
-	(brown = { score: 0 }),
-	(ipa = { score: 0 }),
-	(pale = { score: 0 }),
-	(porter = { score: 0 }),
-	(stout = { score: 0 }),
-	(wheat = { score: 0 }),
-	(pils = { score: 0 }),
-	(bock = { score: 0 })
+	{ style: "brown", score: 0 },
+	{ style: "ipa", score: 0 },
+	{ style: "pale", score: 0 },
+	{ style: "porter", score: 0 },
+	{ style: "stout", score: 0 },
+	{ style: "wheat", score: 0 },
+	{ style: "pils", score: 0 },
+	{ style: "bock", score: 0 }
 ];
 
 var highScore = [];
@@ -52,18 +52,19 @@ $(function() {
 		});
 		console.log(data.join(", "));
 		var brown = beerScore[0];
-		var ipa = beerScore[1];
+		var ipa = beerScore[1].score;
 		var pale = beerScore[2];
 		var porter = beerScore[3];
 		var stout = beerScore[4];
 		var wheat = beerScore[5];
 		var pils = beerScore[6];
 		var bock = beerScore[7];
+		console.log(beerScore[1].score);
 
 		switch (data[0]) {
 			case "q1a1":
-				ipa.score++;
-
+				ipa = ipa += 1;
+				console.log(beerScore);
 				break;
 
 			case "q1a2":
@@ -182,7 +183,7 @@ $(function() {
 				break;
 		}
 
-		console.log(beerScore);
+		// console.log(beerScore);
 
 		var highest = _.chain(beerScore)
 			.keys()
@@ -191,7 +192,7 @@ $(function() {
 			.value();
 
 		var beerSort = _.sortBy(beerScore, "");
-		console.log(beerSort);
+		// console.log(beerSort);
 		// console.log(highest);
 	});
 });
