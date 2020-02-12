@@ -163,7 +163,32 @@ $(function() {
 				break;
 		}
 
-		console.log(beerScore);
+		var keyArray = Object.keys(beerScore);
+		console.log(keyArray);
+		var highest = 0;
+		var key;
+		for (let i = 0; i < keyArray.length; i++) {
+			key = keyArray[i];
+			if (beerScore[key] > highest) {
+				highest = beerScore[key];
+			}
+		}
+		for (let i = 0; i < keyArray.length; i++) {
+			key = keyArray[i];
+			if (beerScore[key] == highest) {
+				console.log(key);
+			}
+		}
+		// console.log("highest score: " + highest);
+
+		// console.log(beerScore);
+		// function choose(beerScore, x) {
+		// 	if (beerScore[x] == highest) {
+		// 		console.log(beerScore[x]);
+		// 	}
+		// }
+
+		// find all keys where value == highest
 
 		// var highest = _.min(beerScore, function(o) {
 		// 	return o.val;
