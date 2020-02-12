@@ -1,15 +1,23 @@
 var express = require("express");
 var app = express.Router();
+var fs = require("fs");
+var path = require("path");
+var Sequelize = require("sequelize");
+var passport = require("passport");
+var bcrypt = require("bcrypt");
+const flash = require("express-flash");
+const session = require("express-session");
+const methodOverride = require("method-override");
 var users = [];
-
 var db = require("../models");
 
 // Load index page
+
 app.get("/", function(req, res) {
 	res.render("../views/front");
 });
 
-//load survey
+// load survey
 app.get("/quiz", function(req, res) {
 	db.questionanswers.findAll({}).then(function(data) {
 		var hbsObject = {
@@ -21,7 +29,7 @@ app.get("/quiz", function(req, res) {
 });
 
 //load input
-app.get("/input", function(req, res) {
+app.get("/input", checkNotAuthenticated, function(req, res) {
 	db.beer.findAll({}).then(function(data) {
 		var hbsObject = {
 			beers: data
@@ -31,27 +39,62 @@ app.get("/input", function(req, res) {
 	});
 });
 
+app.post(
+	"/input",
+	checkNotAuthenticated,
+	passport.authenticate("local", {
+		successRedirect: "/",
+		failureRedirect: "/input",
+		failureFlash: true
+	})
+);
 
 //register input
+app.get("/register", checkNotAuthenticated, function(req, res) {
+	db.beer.findAll({}).then(function(data) {
+		var hbsObject = {
+			beers: data
+		};
 
-app.post("/input", function(req, res) {
-	var email = req.body;
-	console.log(req.body);
-	db.beer
-		.create({
-			email: email
-		})
-		.then(function(dbbeer) {
-			res.json(dbbeer);
-		});
-	users.push({
-		email
+		res.render("../views/register", hbsObject);
 	});
 });
 
-app.post("/register", function(req, res) {
-	res.render("../views/register", hbsObject);
+//register input
+
+app.post("/register", checkNotAuthenticated, async function(req, res) {
+	try {
+		const hashedPassword = await bcrypt.hash(req.body.password, 10);
+		users.push({
+			id: Date.now().toString(),
+			email: req.body.email,
+			password: hashedPassword
+		});
+		res.redirect("/input");
+	} catch {
+		res.redirect("/register");
+	}
+	console.log(users);
 });
+
+app.delete("/logout", (req, res) => {
+	req.logOut();
+	res.redirect("/input");
+});
+
+function checkAuthenticated(req, res, next) {
+	if (req.isAuthenticated()) {
+		return next();
+	}
+	res.redirect("./input");
+}
+
+function checkNotAuthenticated(req, res, next) {
+	if (req.isAuthenticated()) {
+		return res.redirect("/");
+	}
+	next();
+}
 
 // Load beer page and pass in an beer by id
 // app.get("/beer/:id", function(req, res) {
