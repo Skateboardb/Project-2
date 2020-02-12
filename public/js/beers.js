@@ -31,7 +31,7 @@ var beerScore = {
 
 var highScore = [];
 $(function() {
-	$("button").on("click", function(event) {
+	$("#surveySubmit").on("click", function(event) {
 		// Make sure to preventDefault on a submit event.
 		event.preventDefault();
 		var data = [];
@@ -163,18 +163,38 @@ $(function() {
 				break;
 		}
 
-		console.log(beerScore);
-
-		function highKey(o, n) {
-			var keys = Object.keys(o);
-			keys.sort(function(a, b) {
-				return o[b] - o[a];
-			});
-			console.log(keys);
-			return keys.slice(0, n);
+		var keyArray = Object.keys(beerScore);
+		console.log(keyArray);
+		var highest = 0;
+		var key;
+		var styleRec = [];
+		for (let i = 0; i < keyArray.length; i++) {
+			key = keyArray[i];
+			if (beerScore[key] > highest) {
+				highest = beerScore[key];
+			}
 		}
+		for (let i = 0; i < keyArray.length; i++) {
+			key = keyArray[i];
+			if (beerScore[key] == highest) {
+				styleRec.push(key);
+				console.log(styleRec);
+			}
+		}
+		// console.log("highest score: " + highest);
 
-		highKey(beerScore, 2).push(highScore);
-		console.log(highScore);
+		// console.log(beerScore);
+		// function choose(beerScore, x) {
+		// 	if (beerScore[x] == highest) {
+		// 		console.log(beerScore[x]);
+		// 	}
+		// }
+
+		// find all keys where value == highest
+
+		// var highest = _.min(beerScore, function(o) {
+		// 	return o.val;
+		// });
+		// console.log(highest);
 	});
 });
