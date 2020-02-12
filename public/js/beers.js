@@ -190,9 +190,9 @@ $(function() {
 		$.ajax("/api/users", {
 			type: "POST",
 			data: newRec
-		}).then(function(data) {
+		}).then(function(req, res) {
 			// Reload the page to get the updated list
-			location.reload();
+			window.location.replace("/dashboard");
 		});
 
 		// var newStyle={
