@@ -47,6 +47,8 @@ app.get("/input", function(req, res) {
 	});
 });
 
+app.get("/display", function(req, res) {});
+
 //register input
 
 app.post("/input", function(req, res) {
@@ -62,8 +64,6 @@ app.post("/input", function(req, res) {
 	users.push({
 		email
 	});
-	console.log(users);
-	res.send("hello");
 });
 
 // Load beer page and pass in an beer by id
