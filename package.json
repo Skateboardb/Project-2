@@ -43,6 +43,6 @@
     "test": "test"
   },
   "devDependencies": {
-    "handlebars": "^4.7.3"
+    "handlebars": "4.5.0"
   }
 }

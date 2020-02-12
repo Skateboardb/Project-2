@@ -1,5 +1,5 @@
-<form>
-    <div class="row ">
+<form class="create-form" id="create-form">
+    <div class="row form-group ">
         <div id="ansContainer" class="col-10 ">
             {{#each questionanswers}}
             {{!-- {{#each questions}} --}}
@@ -8,41 +8,44 @@
                     <h3>{{question}}</h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md">
-                    <label for="{{a1}}">
-                        <input id="{{a1}}" type="checkbox" value="false">
-                        <h3>{{a1}} </h3>
-                    </label>
+            <fieldset class="survey-answers" name="{{id}}">
+                <div class="row">
+
+                    <div class="col-2">
+                        <label for="q{{id}}a1">
+                            <input name="{{id}}" id="q{{id}}a1" type="radio" value="q{{id}}a1" data-val="1">
+                            <h3>{{a1}} </h3>
+                        </label>
+                    </div>
+                    <div class="col-2">
+                        <label for="q{{id}}a2">
+                            <input name="{{id}}" id="q{{id}}a2" type="radio" value="q{{id}}a2">
+                            <h3 class="">{{a2}} </h3>
+                        </label>
+                    </div>
+                    <div class="col-2">
+                        <label for="q{{id}}a3">
+                            <input name="{{id}}" id="q{{id}}a3" type="radio" value="q{{id}}a3">
+                            <h3 class="">{{a3}} </h3>
+                        </label>
+                    </div>
+                    <div class="col-2">
+                        <label for="q{{id}}a4">
+                            <input name="{{id}}" id="q{{id}}a4" type="radio" value="q{{id}}a4">
+                            <h3 class="">{{a4}} </h3>
+                        </label>
+                    </div>
+                    <div class="col-2">
+                        <label for="q{{id}}a5">
+                            <input name="{{id}}" id="q{{id}}a5" type="radio" value="q{{id}}a5">
+                            <h3 class="">{{a5}} </h3>
+                        </label>
+                    </div>
                 </div>
-                <div class="col-md">
-                    <label for="{{a2}}">
-                        <input id="{{a2}}" type="checkbox" value="false">
-                        <h3 class="">{{a2}} </h3>
-                    </label>
-                </div>
-                <div class="col-md">
-                    <label for="{{a3}}">
-                        <input id="{{a3}}" type="checkbox" value="false">
-                        <h3 class="">{{a3}} </h3>
-                    </label>
-                </div>
-                <div class="col-md">
-                    <label for="{{a4}}">
-                        <input id="{{a4}}" type="checkbox" value="false">
-                        <h3 class="">{{a4}} </h3>
-                    </label>
-                </div>
-                <div class="col-md">
-                    <label for="{{a5}}">
-                        <input id="{{a5}}" type="checkbox" value="false">
-                        <h3 class="">{{a5}} </h3>
-                    </label>
-                </div>
-            </div>
+            </fieldset>
             {{!-- {{/each}} --}}
             {{/each}}
         </div>
     </div>
-    <a class="btn" href="input">Submit</a>
+    <button type="submit">Submit</button>
 </form>

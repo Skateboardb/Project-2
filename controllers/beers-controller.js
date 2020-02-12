@@ -6,24 +6,8 @@ var db = require("../models");
 
 // Load index page
 app.get("/", function(req, res) {
-	Promise.all([db.beer.findAll({}), db.questions.findAll({})]).then(data => {
-		var hbsObject = {
-			beers: data[0],
-			questions: data[1]
-		};
-		res.render("../views/front", hbsObject);
-	});
+	res.render("../views/front");
 });
-
-// app.get("/quiz", function(req, res) {
-// 	Promise.all([db.answers.findAll({}), db.questions.findAll({})]).then(data => {
-// 		var hbsObject = {
-// 			answers: data[0],
-// 			questions: data[1]
-// 		};
-// 		res.render("../views/quiz", hbsObject);
-// 	});
-// });
 
 //load survey
 app.get("/quiz", function(req, res) {
@@ -47,10 +31,26 @@ app.get("/input", function(req, res) {
 	});
 });
 
+app.get("/display", function(req, res) {});
+
 //register input
 
-app.post("/register", function(req, res) {
+app.post("/input", function(req, res) {
+	var email = req.body;
+	console.log(req.body);
+	db.beer
+		.create({
+			email: email
+		})
+		.then(function(dbbeer) {
+			res.json(dbbeer);
+		});
+	users.push({
+		email
+	});
+});
 
+app.post("/register", function(req, res) {
 	res.render("../views/register", hbsObject);
 });
 
