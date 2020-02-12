@@ -26,21 +26,21 @@ module.exports = function(app) {
 
 
 
-app.post("/input", function(req, res) {
+// app.post("/input", function(req, res) {
   
-  var email = req.body
+//   var email = req.body
   
-  console.log(req.body);
-  db.beer.create({
-    email: email
-  }).then(function(dbbeer) {
-    res.json(dbbeer);
-  })
-  users.push({
-    email
-  })
-  console.log(users)
-	res.send("hello");
+//   console.log(req.body);
+//   db.beer.create({
+//     email: email
+//   }).then(function(dbbeer) {
+//     res.json(dbbeer);
+//   })
+//   users.push({
+//     email
+//   })
+//   console.log(users)
+// 	res.send("hello");
 	
-});
+// });
 };

@@ -21,6 +21,7 @@
   "dependencies": {
     "@handlebars/allow-prototype-access": "^1.0.3",
     "axios": "^0.19.2",
+    "bcrypt": "^3.0.8",
     "brewerydb-node": "0.0.1",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
@@ -28,15 +29,20 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-flash": "0.0.2",
     "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "method-override": "^3.0.0",
     "mocha": "^7.0.1",
     "morgan": "^1.9.1",
     "mysql": "^2.18.1",
     "mysql-server": "^1.0.5",
     "mysql2": "^2.1.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "request": "^2.88.0",
     "require": "^2.4.20",
-    "sequelize": "^5.21.3"
+    "sequelize": "^5.21.4"
   },
   "directories": {
     "test": "test"
