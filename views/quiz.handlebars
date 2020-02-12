@@ -8,8 +8,9 @@
                     <h3>{{question}}</h3>
                 </div>
             </div>
-            <div class="row">
-                <fieldset class="survey-answers" name="{{id}}">
+            <fieldset class="survey-answers" name="{{id}}">
+                <div class="row">
+
                     <div class="col-2">
                         <label for="q{{id}}a1">
                             <input name="{{id}}" id="q{{id}}a1" type="radio" value="q{{id}}a1" data-val="1">
@@ -40,8 +41,8 @@
                             <h3 class="">{{a5}} </h3>
                         </label>
                     </div>
-                </fieldset>
-            </div>
+                </div>
+            </fieldset>
             {{!-- {{/each}} --}}
             {{/each}}
         </div>
