@@ -1,50 +1,50 @@
 {
-
-  "name": "project-2",
-  "version": "1.0.0",
-  "description": "## WELCOME",
-  "main": "server.js",
-  "scripts": {
-    "test": "mocha",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Skateboardb/Project-2.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Skateboardb/Project-2/issues"
-  },
-  "homepage": "https://github.com/Skateboardb/Project-2#readme",
-  "dependencies": {
-    "@handlebars/allow-prototype-access": "^1.0.3",
-    "axios": "^0.19.2",
-    "brewerydb-node": "0.0.1",
-    "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
-    "cookie-parser": "^1.4.4",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
-    "mocha": "^7.0.1",
-    "morgan": "^1.9.1",
-    "mysql": "^2.18.1",
-    "mysql-server": "^1.0.5",
-    "mysql2": "^2.1.0",
-    "node-brewerydb": "git+https://github.com/DanielOchoa/node-brewery-db.git",
-    "request": "^2.88.0",
-    "require": "^2.4.20",
-    "sequelize": "^5.21.3"
-  },
-  "directories": {
-    "test": "test"
-  },
-  "devDependencies": {
-    "handlebars": "4.5.0"
-  }
-
+	"name": "project-2",
+	"version": "1.0.0",
+	"description": "## WELCOME",
+	"main": "server.js",
+	"scripts": {
+		"test": "mocha",
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Skateboardb/Project-2.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Skateboardb/Project-2/issues"
+	},
+	"homepage": "https://github.com/Skateboardb/Project-2#readme",
+	"dependencies": {
+		"@handlebars/allow-prototype-access": "^1.0.3",
+		"axios": "^0.19.2",
+		"brewerydb-node": "0.0.1",
+		"chai": "^4.2.0",
+		"chai-http": "^4.3.0",
+		"cookie-parser": "^1.4.4",
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-handlebars": "^3.1.0",
+		"mocha": "^7.0.1",
+		"morgan": "^1.9.1",
+		"mysql": "^2.18.1",
+		"mysql-server": "^1.0.5",
+		"mysql2": "^2.1.0",
+		"node-brewerydb": "git+https://github.com/DanielOchoa/node-brewery-db.git",
+		"request": "^2.88.0",
+		"require": "^2.4.20",
+		"requirejs": "^2.3.6",
+		"sequelize": "^5.21.3",
+		"underscore": "^1.9.2"
+	},
+	"directories": {
+		"test": "test"
+	},
+	"devDependencies": {
+		"handlebars": "4.5.0"
+	}
 }

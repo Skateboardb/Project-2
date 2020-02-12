@@ -18,16 +18,27 @@
 
 // ]
 // alert("hello");
-var beerScore = {
-	brown: 0,
-	ipa: 0,
-	pale: 0,
-	porter: 0,
-	stout: 0,
-	wheat: 0,
-	pils: 0,
-	bock: 0
-};
+// var beerScore = {
+// 	brown: 0,
+// 	ipa: 0,
+// 	pale: 0,
+// 	porter: 0,
+// 	stout: 0,
+// 	wheat: 0,
+// 	pils: 0,
+// 	bock: 0
+// };
+
+var beerScore = [
+	(brown = { score: 0 }),
+	(ipa = { score: 0 }),
+	(pale = { score: 0 }),
+	(porter = { score: 0 }),
+	(stout = { score: 0 }),
+	(wheat = { score: 0 }),
+	(pils = { score: 0 }),
+	(bock = { score: 0 })
+];
 
 var highScore = [];
 $(function() {
@@ -40,141 +51,147 @@ $(function() {
 			data.push($(this).val());
 		});
 		console.log(data.join(", "));
+		var brown = beerScore[0];
+		var ipa = beerScore[1];
+		var pale = beerScore[2];
+		var porter = beerScore[3];
+		var stout = beerScore[4];
+		var wheat = beerScore[5];
+		var pils = beerScore[6];
+		var bock = beerScore[7];
 
 		switch (data[0]) {
 			case "q1a1":
-				beerScore.ipa++;
+				ipa.score++;
 
 				break;
 
 			case "q1a2":
-				beerScore.stout++;
+				stout.score++;
 				break;
 
 			case "q1a3":
-				beerScore.brown++;
+				brown.score++;
 				break;
 
 			case "q1a4":
-				beerScore.porter++;
+				porter.score++;
 				break;
 
 			case "q1a5":
-				beerScore.pale++;
+				pale.score++;
 				break;
 		}
 
 		switch (data[1]) {
 			case "q2a1":
-				beerScore.pils++;
+				pils.score++;
 
 				break;
 
 			case "q2a2":
-				beerScore.ipa++;
+				ipa.score++;
 				break;
 
 			case "q2a3":
-				beerScore.wheat++;
+				wheat.score++;
 				break;
 
 			case "q2a4":
-				beerScore.bock++;
-				beerScore.brown++;
+				bock.score++;
+				brown.score++;
 				break;
 
 			case "q2a5":
-				beerScore.stout++;
+				stout.score++;
 				break;
 		}
 
 		switch (data[2]) {
 			case "q3a1":
-				beerScore.stout++;
+				stout.score++;
 
 				break;
 
 			case "q3a2":
-				beerScore.porter++;
-				beerScore.brown++;
+				porter.score++;
+				brown.score++;
 				break;
 
 			case "q3a3":
-				beerScore.bock++;
-				beerScore.wheat++;
-				beerScore.pale++;
+				bock.score++;
+				wheat.score++;
+				pale.score++;
 				break;
 
 			case "q3a4":
-				beerScore.ipa++;
+				ipa.score++;
 				break;
 
 			case "q3a5":
-				beerScore.pils++;
+				pils.score++;
 				break;
 		}
 
 		switch (data[3]) {
 			case "q4a1":
-				beerScore.pale++;
+				pale.score++;
 
 				break;
 
 			case "q4a2":
-				beerScore.ipa++;
+				ipa.score++;
 				break;
 
 			case "q4a3":
-				beerScore.brown++;
+				brown.score++;
 				break;
 
 			case "q4a4":
-				beerScore.porter++;
+				porter.score++;
 				break;
 
 			case "q4a5":
-				beerScore.stout++;
+				stout.score++;
 				break;
 		}
 
 		switch (data[4]) {
 			case "q5a1":
-				beerScore.pale++;
+				pale.score++;
 
 				break;
 
 			case "q5a2":
-				beerScore.wheat++;
-				beerScore.pils++;
+				wheat.score++;
+				pils.score++;
 				break;
 
 			case "q5a3":
-				beerScore.brown++;
+				brown.score++;
 				break;
 
 			case "q5a4":
-				beerScore.bock++;
-				beerScore.ipa++;
+				bock.score++;
+				ipa.score++;
 				break;
 
 			case "q5a5":
-				beerScore.porter++;
-				beerScore.stout++;
+				porter.score++;
+				stout.score++;
 				break;
 		}
 
 		console.log(beerScore);
 
-		function highKey(o, n) {
-			var keys = Object.keys(o);
-			keys.sort(function(a, b) {
-				return o[b] - o[a];
-			});
-			console.log(keys);
-			return keys.slice(0, n);
-		}
+		var highest = _.chain(beerScore)
+			.keys()
+			.sort()
+			.last()
+			.value();
 
-		highKey(beerScore, 2).push(highScore);
-		console.log(highScore);
+		var beerSort = _.sortBy(beerScore, "");
+		console.log(beerSort);
+		// console.log(highest);
 	});
 });
