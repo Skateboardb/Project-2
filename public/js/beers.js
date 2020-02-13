@@ -176,25 +176,46 @@ $(function() {
 		}
 		for (let i = 0; i < keyArray.length; i++) {
 			key = keyArray[i];
+
 			if (beerScore[key] == highest) {
 				styleRec.push(key);
 				console.log(styleRec);
 			}
 		}
+		alert(
+			"Hey, you did it! Based on your choices we recommend you try a nice " +
+				styleRec +
+				". Check out the list on the next page to read a description and see what else sounds good to you."
+		);
 
 		var newRec = {
 			rec_style1: styleRec[0],
 			rec_style2: styleRec[1]
 		};
 
+		// function showModal() {
+		// 	$("#bestBeer").append(
+		// 		"You did it! Based on your results, we recommend you check out" +
+		// 			styleRec +
+		// 			". Check the list below to read a brief description, and feel free to see what else sounds appealing."
+		// 	);
+		// 	$("#beerModal").modal("show");
+		// }
+
 		$.ajax("/api/users", {
 			type: "POST",
 			data: newRec
 		}).then(function(req, res) {
-			// Reload the page to get the updated list
+			// redirect to dashboard
 			window.location.replace("/dashboard");
 		});
 
+		// $.ajax("/dashboard", {
+		// 	type: "GET",
+		// 	data: newRec
+		// }).then((req, res) => {
+		// 	showModal();
+		// });
 		// var newStyle={
 		// 	rec_style1:
 		// }
