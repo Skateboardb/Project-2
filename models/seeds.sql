@@ -15,6 +15,10 @@ VALUES
     ("German-Style Pilsner", "Perhaps one of the most iconic beers of the modern world, Pilsner stands tall and golden with its hops coming to center-stage without becoming overly bitter. This pale and light-bodied brew makes a refreshing companion in warmer months, and we think you'll enjoy it along with a nice dinner of chicken and shellfish."),
     ("German-Style Bock", "Light carbonation, sweet malty goodness, and a smooth finish... what's not to love? For those who aren't crazy about the hoppy flavor of some other popular brews, the practically ancient Bock style may just be the longest-standing beer to date. We think you'll enjoy the toasty, nutty flavor this German classic brings to the table.");
 
+-- Test example
+-- id_beer,abv,id,name,style,brewery_id,ounces
+-- 0,0.05,1436,Pub Beer,American Pale Lager,408,12
+-- 1,0.066,2265,Devil's Cup,American Pale Ale (APA),177,12
 
 -- INSERT INTO questions
 --     (question)
