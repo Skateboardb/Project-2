@@ -1,9 +1,72 @@
- <div class="container-fluid" id="homepage">
- <a href="temp link"> <button class="btn btn-primary btn-lg homebutton" role="button">Home</a></button>
-<input type="text" id="searched-term" value="Search for beer!">
-<select name="search-type" id="search-type">
-    <option value="">Beer</option>
-    <option value="">Breweries</option>
-    <option value="">State</option>
-</select>
-<button type="submit" id="beer-search">Search</button>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Search for a beer</title>
+</head>
+
+<body>
+
+  <!-- Beer Select Box -->
+  <form id="beer-form">
+
+    <!-- Label for Text Box -->
+    <label for="beer-input">Choose Your Beer</label>
+
+    <!-- Text Input Box -->
+    <input type="text" id="beer-input"><br>
+
+    <!-- Submit Button -->
+    <input id="select-beer" type="submit" value="GO!">
+  </form>
+
+  <!-- Beer Information -->
+  <div id="beer-div"></div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  function searchBeer(beer) {
+    var BreweryDb= require("brewerydb-node");
+    var queryURL = new BreweryDb({ apiKey: "16194eefa3c198216f76be77bbbead48" });
+
+    queryURL.beers({ name:"#beer-input" }, function(err, data){
+    console.log(data[0]);
+}) 
+
+    // // Querying brewerydb
+    // var queryURL = "https://sandbox-api.brewerydb.com/v2" + beer + "16194eefa3c198216f76be77bbbead48";
+    // // var queryURL = "https://rest.bandsintown.com/artists/" + beer + "?app_id=codingbootcamp";
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+
+      // Printing the entire object to console
+      console.log(response);
+
+      // Constructing HTML containing the beer information
+      var goToBeer = $("<h1>").text(response.name);
+      // var goToBeer = $("<a>").attr("href", response.url).text("See Tour Dates");
+
+      // Empty the contents of the beer-div, append the new beer content
+      $("#beer-div").empty();
+      $("#beer-div").append(goToBeer);
+    });
+  }
+
+  // Event handler for user clicking the select-beer button
+  $("#select-beer").on("click", function(event) {
+    // Preventing the button from trying to submit the form
+    event.preventDefault();
+    // Storing the beer name
+    var inputBeer = $("#beer-input").val().trim();
+
+    // Running the searchBeer function(passing in the beer as an argument)
+    searchBeer(inputBeer);
+  });
+</script>
+
+</html>
