@@ -182,11 +182,11 @@ $(function() {
 				console.log(styleRec);
 			}
 		}
-		alert(
-			"Hey, you did it! Based on your choices we recommend you try a nice " +
-				styleRec +
-				". Check out the list on the next page to read a description and see what else sounds good to you."
-		);
+		// alert(
+		// 	"Hey, you did it! Based on your choices we recommend you try a nice " +
+		// 		styleRec +
+		// 		". Check out the list on the next page to read a description and see what else sounds good to you."
+		// );
 
 		var newRec = {
 			rec_style1: styleRec[0],
