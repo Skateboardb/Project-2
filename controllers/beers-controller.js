@@ -85,7 +85,7 @@ app.post("/register", checkNotAuthenticated, async function(req, res) {
 		console.log(newUser);
 		res.redirect("/input");
 	} catch (e) {
-			console.log(e);
+		console.log(e);
 		res.redirect("/register");
 	}
 	// console.log(users);
