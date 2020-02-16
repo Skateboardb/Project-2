@@ -1,3 +1,4 @@
+
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
@@ -88,6 +89,7 @@ var routes = require("./controllers/beers-controller");
 app.use("/", routes);
 
 require("./app");
+
 
 // // Testing - Shannen
 // require("./controllers/passport.js")(app, passport);

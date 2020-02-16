@@ -187,12 +187,13 @@ $(function() {
 			rec_style2: styleRec[1]
 		};
 
-		$.ajax("/api/users", {
+		$.ajax("/input", {
 			type: "POST",
 			data: newRec
 		}).then(function(data) {
 			// Reload the page to get the updated list
-			location.reload();
+
+			window.location.replace("/input");
 		});
 
 		// var newStyle={
