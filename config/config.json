@@ -8,7 +8,7 @@
 	},
 	"test": {
 		"username": "root",
-		"password": "",
+		"password": "Trumpsucks#3",
 		"database": "beer_db",
 		"host": "localhost",
 		"dialect": "mysql",

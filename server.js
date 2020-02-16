@@ -25,6 +25,7 @@ var PORT = process.env.PORT || 3000;
 var beer = require("./controllers/beer");
 var styles = require("./controllers/styles");
 
+// Passport
 const initializePassport = require("./config/passport-config");
 initializePassport(
 	passport,
@@ -35,6 +36,7 @@ initializePassport(
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(express.text());
 app.use(flash());
 app.use(
 	session({
@@ -88,7 +90,11 @@ app.use("/", routes);
 
 require("./app");
 
-var syncOptions = { force: true };
+
+// // Testing - Shannen
+// require("./controllers/passport.js")(app, passport);
+
+var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`

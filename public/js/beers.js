@@ -192,6 +192,7 @@ $(function() {
 			data: newRec
 		}).then(function(data) {
 			// Reload the page to get the updated list
+
 			window.location.replace("/input");
 		});
 
@@ -218,5 +219,4 @@ $(function() {
 		// });
 		// console.log(highest);
 	});
-
 });
