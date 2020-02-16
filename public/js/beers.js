@@ -181,6 +181,20 @@ $(function() {
 				console.log(styleRec);
 			}
 		}
+
+		var newRec = {
+			rec_style1: styleRec[0],
+			rec_style2: styleRec[1]
+		};
+
+		$.ajax("/input", {
+			type: "POST",
+			data: newRec
+		}).then(function(data) {
+			// Reload the page to get the updated list
+			window.location.replace("/input");
+		});
+
 		// var newStyle={
 		// 	rec_style1:
 		// }

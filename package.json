@@ -22,6 +22,7 @@
     "@handlebars/allow-prototype-access": "^1.0.3",
     "axios": "^0.19.2",
     "bcrypt": "^3.0.8",
+    "bcryptjs": "^2.4.3",
     "brewerydb-node": "0.0.1",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
@@ -38,12 +39,13 @@
     "mysql": "^2.18.1",
     "mysql-server": "^1.0.5",
     "mysql2": "^2.1.0",
+    "node-brewerydb": "git+https://github.com/DanielOchoa/node-brewery-db.git",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "node-brewerydb": "git+https://github.com/DanielOchoa/node-brewery-db.git",
     "request": "^2.88.0",
     "require": "^2.4.20",
-    "sequelize": "^5.21.4"
+    "sequelize": "^5.21.4",
+    "session-file-store": "^1.4.0"
   },
   "directories": {
     "test": "test"
