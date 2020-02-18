@@ -1,23 +1,3 @@
-// beers Array
-// [beer1: score,
-// beer2: score,
-// beer3:score]
-
-// grab Element
-// switch
-//  data-value
-//  case 1
-
-//  beer1++
-
-//  case 2
-
-//  beer2 ++ && beer3 ++
-
-// var styles = [
-
-// ]
-// alert("hello");
 var beerScore = {
 	brown: 0,
 	ipa: 0,
@@ -188,9 +168,10 @@ $(function() {
 		// 		". Check out the list on the next page to read a description and see what else sounds good to you."
 		// );
 
-		var newRec = {
+		var newUser = {
 			rec_style1: styleRec[0],
-			rec_style2: styleRec[1]
+			rec_style2: styleRec[1],
+			user_email: null
 		};
 
 		// function showModal() {
@@ -202,12 +183,21 @@ $(function() {
 		// 	$("#beerModal").modal("show");
 		// }
 
-		$.ajax("/api/users", {
-			type: "POST",
-			data: newRec
-		}).then(function(req, res) {
-			// redirect to dashboard
-			window.location.replace("/dashboard");
+		$("#modalSubmit").on("click", function(event) {
+			event.preventDefault();
+			var email = $("#email-input").val();
+			// console.log(email);
+			newUser.user_email = email;
+			// console.log(newUser);
+			$.ajax("/api/users", {
+				type: "POST",
+				data: newUser
+			}).then(function(req, res) {
+				// console.log(req);
+				sessionStorage.setItem("userData", req.id);
+				// console.log(sessionStorage.getItem("userData"));
+				window.location.href = "/dashboard";
+			});
 		});
 
 		// $.ajax("/dashboard", {

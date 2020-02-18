@@ -75,3 +75,7 @@ h1 {
 #ansContainer {
 	margin: auto;
 }
+
+.modal-header .close {
+	margin: -1rem -1rem -1rem;
+}

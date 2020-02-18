@@ -23,7 +23,7 @@ app.get("/quiz", function(req, res) {
 		var hbsObject = {
 			questionanswers: data
 		};
-		console.log(hbsObject.data);
+
 		res.render("../views/quiz", hbsObject);
 	});
 });
@@ -33,6 +33,7 @@ app.post("/api/users", function(req, res) {
 	db.users.create(req.body).then(function(result) {
 		res.json(result);
 	});
+	// console.log(req, res);
 });
 
 app.get("/api/users", function(req, res) {
