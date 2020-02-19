@@ -46,7 +46,6 @@ $.ajax("/api/users", {
 					default:
 						break;
 				}
-				console.log(req);
 			}
 		});
 	}
