@@ -173,7 +173,7 @@ $(function() {
 			rec_style2: styleRec[1],
 			user_email: null
 		};
-
+		console.log(newUser);
 		// function showModal() {
 		// 	$("#bestBeer").append(
 		// 		"You did it! Based on your results, we recommend you check out" +

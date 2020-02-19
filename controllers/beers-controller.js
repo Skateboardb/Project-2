@@ -8,7 +8,7 @@ var bcrypt = require("bcrypt");
 const flash = require("express-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
-// var users = [];
+var users = [];
 var db = require("../models");
 
 // Load index page
@@ -98,17 +98,16 @@ app.get("/register", checkNotAuthenticated, function(req, res) {
 app.post("/register", checkNotAuthenticated, async function(req, res) {
 	try {
 		const hashedPassword = await bcrypt.hash(req.body.password, 10);
-		const newUser = await db.users.create({
-			user_email: req.body.email,
-			user_pass: hashedPassword
+		users.push({
+			id: Date.now().toString(),
+			email: req.body.email,
+			password: hashedPassword
 		});
-		console.log(newUser);
 		res.redirect("/input");
-	} catch (e) {
-			console.log(e);
+	} catch {
 		res.redirect("/register");
 	}
-	// console.log(users);
+	console.log(users);
 });
 
 app.delete("/logout", (req, res) => {
