@@ -1,28 +1,14 @@
 {{> navbar-block}}
-<div id="beerModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">Your New Favorite Brew!</h1>
-            </div>
-            <div class="modal-body">
-                <h3 id="bestBeer">
 
-                    </h2>
+<div class="jumbotron" id="beer-rec">
+    <h3>Your New Favorite Brew: <span id="beer-style"></span></h3>
+    <p id="beer-description"></p>
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="jumbotron" id="beer-list">
-    {{#each beers}}
-    <h3>{{style}}</h3>
-    <p>{{description}}</p>
-    {{/each}}
+    <br>
+    <br>
+    <br>
+    <h5 id="beer-alt"></h5>
+    <p id="alt-desc"></p>
 </div>
 
 <script src="/js/dashboard.js"></script>
