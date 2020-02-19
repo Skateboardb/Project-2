@@ -42,6 +42,13 @@ app.get("/api/users", function(req, res) {
 	});
 });
 
+// beers api
+
+app.get("/api/beers", function(req, res) {
+	db.beer.findAll({}).then(function(data) {
+		res.json(data);
+	});
+});
 //dashboard
 
 app.get("/dashboard", (req, res) => {
