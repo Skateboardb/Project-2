@@ -68,7 +68,7 @@ $.ajax("/api/users", {
 					switch (userData.rec_style2) {
 						case "brown":
 							console.log(req[0].description);
-							$("#beer-alt-style").text(req[0].style);
+							$("#beer-alt").append(req[0].style);
 							$("#alt-desc").text(req[0].description);
 							break;
 						case "ipa":
@@ -79,33 +79,33 @@ $.ajax("/api/users", {
 							break;
 						case "pale":
 							console.log(req[2].description);
-							$("#beer-alt-style").text(req[2].style);
+							$("#beer-alt").append(req[2].style);
 							$("#alt-desc").text(req[2].description);
 							break;
 						case "porter":
 							console.log(req[3].description);
 
-							$("#beer-alt-style").text(req[3].style);
+							$("#beer-alt").append(req[3].style);
 							$("#alt-desc").text(req[3].description);
 							break;
 						case "stout":
 							console.log(req[4].description);
-							$("#beer-alt-style").text(req[4].style);
+							$("#beer-alt").append(req[4].style);
 							$("#alt-desc").text(req[4].description);
 							break;
 						case "wheat":
 							console.log(req[5].description);
-							$("#beer-alt-style").text(req[5].style);
+							$("#beer-alt").append(req[5].style);
 							$("#alt-desc").text(req[5].description);
 							break;
 						case "pils":
 							console.log(req[6].description);
-							$("#beer-alt-style").text(req[6].style);
+							$("#beer-alt").append(req[6].style);
 							$("#alt-desc").text(req[6].description);
 							break;
 						case "bock":
 							console.log(req[7].description);
-							$("#beer-alt-style").text(req[7].style);
+							$("#beer-alt").append(req[7].style);
 							$("#alt-desc").text(req[7].description);
 							break;
 						default:
