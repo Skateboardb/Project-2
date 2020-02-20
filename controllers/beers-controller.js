@@ -41,6 +41,25 @@ app.get("/api/users", function(req, res) {
 	});
 });
 
+// beers api
+
+app.get("/api/beers", function(req, res) {
+	db.beer.findAll({}).then(function(data) {
+		res.json(data);
+	});
+});
+//dashboard
+
+app.get("/dashboard", (req, res) => {
+	Promise.all([db.users.findAll({}), db.beer.findAll({})]).then(data => {
+		var hbsObject = {
+			users: data[0],
+			beers: data[1]
+		};
+		res.render("../views/dash", hbsObject);
+	});
+});
+
 //load input
 app.get("/input", checkNotAuthenticated, function(req, res) {
 	db.beer.findAll({}).then(function(data) {
@@ -85,7 +104,7 @@ app.post("/register", checkNotAuthenticated, async function(req, res) {
 		console.log(newUser);
 		res.redirect("/input");
 	} catch (e) {
-			console.log(e);
+		console.log(e);
 		res.redirect("/register");
 	}
 	// console.log(users);
