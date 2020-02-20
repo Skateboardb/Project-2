@@ -69,7 +69,7 @@ client.beers({ name: "Budweiser" }, function(err, res) {
 	if (err) {
 		// handle errors
 	}
-	console.log(res);
+	// console.log(res);
 });
 
 // Handlebars
