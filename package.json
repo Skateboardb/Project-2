@@ -21,7 +21,7 @@
 	"dependencies": {
 		"@handlebars/allow-prototype-access": "^1.0.3",
 		"axios": "^0.19.2",
-		"bcrypt": "^3.0.8",
+		"bcrypt": "^5.0.0",
 		"bcryptjs": "^2.4.3",
 		"brewerydb-node": "0.0.1",
 		"chai": "^4.2.0",
