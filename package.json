@@ -20,7 +20,7 @@
 	"homepage": "https://github.com/Skateboardb/Project-2#readme",
 	"dependencies": {
 		"@handlebars/allow-prototype-access": "^1.0.3",
-		"axios": "^0.19.2",
+		"axios": "^0.21.1",
 		"bcrypt": "^3.0.8",
 		"bcryptjs": "^2.4.3",
 		"brewerydb-node": "0.0.1",
